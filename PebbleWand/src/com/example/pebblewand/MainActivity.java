@@ -38,42 +38,13 @@ public class MainActivity extends Activity {
 	//ArrayList<String> accBuffer=new ArrayList<String>();
 	HashMap<Integer, String> accBuffer;
 	final Handler handler = new Handler();
-	 private final WebSocketConnection mConnection = new WebSocketConnection();
 	 
-	   private void start() {
-	 
-	      final String wsuri = "ws://sockets.mbed.org/ws/pebblewand/rw";
-	 
-	      try {
-	         mConnection.connect(wsuri, new WebSocketHandler() {
-	 
-	            @Override
-	            public void onOpen() {
-	               Log.d("123", "Status: Connected to " + wsuri);
-	               mConnection.sendTextMessage("Hello, world!");
-	            }
-	 
-	            @Override
-	            public void onTextMessage(String payload) {
-	               Log.d("123", "Got echo: " + payload);
-	            }
-	 
-	            @Override
-	            public void onClose(int code, String reason) {
-	               Log.d("123", "Connection lost.");
-	            }
-	         });
-	      } catch (WebSocketException e) {
-	 
-	         Log.d("123", e.toString());
-	      }
-	   }
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		accBuffer=new HashMap<Integer, String>();
-		start();
+	
 	}
 	
 	@Override
@@ -111,10 +82,10 @@ public class MainActivity extends Activity {
 	        		temp.setValue(100000000);
 		        	((TextView) findViewById(R.id.textView1)).setText(data.getString(0xabbababe));
 		        	if(data.getString(0xabbababe).equals("First Item")){
-		        		temp.setValue(100000000);
+		        		temp.setValue(10000000);
 		        	}
 		        	if(data.getString(0xabbababe).equals("Second Item")){
-		        		temp.setValue(200000000);
+		        		temp.setValue(999999999);
 		        	}
 		        	try {
 		        		readings.add(temp); 

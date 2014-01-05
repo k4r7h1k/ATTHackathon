@@ -101,42 +101,33 @@ static void window_load(Window *window) {
   // This is an example of how you'd set a simple menu item
   first_menu_items[num_a_items++] = (SimpleMenuItem){
     // You should give each menu item a title and callback
-    .title = "First Item",
+    .title = "Garage",
     .callback = menu_select_callback,
   };
   // The menu items appear in the order saved in the menu items array
   first_menu_items[num_a_items++] = (SimpleMenuItem){
-    .title = "Second Item",
+    .title = "Front Door",
     // You can also give menu items a subtitle
-    .subtitle = "Here's a subtitle",
+    
     .callback = menu_select_callback,
   };
   first_menu_items[num_a_items++] = (SimpleMenuItem){
-    .title = "Third Item",
-    .subtitle = "This has an icon",
+    .title = "Bedroom Lights",
+    
     .callback = menu_select_callback,
     // This is how you would give a menu item an icon
-    .icon = menu_icon_image,
+    
   };
 
   // This initializes the second section
-  second_menu_items[0] = (SimpleMenuItem){
-    .title = "Special Item",
-    // You can use different callbacks for your menu items
-    .callback = special_select_callback,
-  };
+  
 
   // Bind the menu items to the corresponding menu sections
   menu_sections[0] = (SimpleMenuSection){
     .num_items = NUM_FIRST_MENU_ITEMS,
     .items = first_menu_items,
   };
-  menu_sections[1] = (SimpleMenuSection){
-    // Menu sections can also have titles as well
-    .title = "Yet Another Section",
-    .num_items = NUM_SECOND_MENU_ITEMS,
-    .items = second_menu_items,
-  };
+  
 
   // Now we prepare to initialize the simple menu layer
   // We need the bounds to specify the simple menu layer's viewport size

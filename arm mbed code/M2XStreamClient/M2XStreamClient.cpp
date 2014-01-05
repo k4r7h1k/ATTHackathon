@@ -122,7 +122,7 @@ int M2XStreamClient::receive(const char* feedId, const char* streamName,
                              stream_value_read_callback callback, void* context) {
   if (_client->connect(_host, _port)) {
 #ifdef DEBUG
-    pc.printf("Connected to M2X server!\n");
+    printf("Connected to M2X server!\n");
 #endif
     _client->print("GET /v1/feeds/");
     print_encoded_string(_client, feedId);
@@ -133,7 +133,7 @@ int M2XStreamClient::receive(const char* feedId, const char* streamName,
     writeHttpHeader(-1);
   } else {
 #ifdef DEBUG
-    pc.printf("ERROR: Cannot connect to M2X server!\n");
+    printf("ERROR: Cannot connect to M2X server!\n");
 #endif
     return E_NOCONNECTION;
   }
