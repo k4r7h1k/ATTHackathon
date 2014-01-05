@@ -1,0 +1,5 @@
+data/main.cpp.i
+data/SocketModem.lib.i
+data/M2XStreamClient.lib.i
+data/jsonlite.lib.i
+data/mbed.bld.i

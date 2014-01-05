@@ -1,0 +1,24 @@
+{
+    "versionLabel": "1.0",
+    "uuid": "2daf4c14-973c-474f-80c3-706e1c6df62a",
+    "appKeys": {},
+    "longName": "Watchapp",
+    "versionCode": 1,
+    "capabilities": [
+        ""
+    ],
+    "shortName": "app",
+    "companyName": "karthik.srinivasan@usc.edu",
+    "watchapp": {
+        "watchface": false
+    },
+    "resources": {
+        "media": [
+            {
+                "type": "png",
+                "name": "IMAGE_MENU_ICON_1",
+                "file": "images/menu_icon_simplicity.png"
+            }
+        ]
+    }
+}

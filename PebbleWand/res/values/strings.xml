@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PebbleWand</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+     <string name="m2x_master_key">12988a511467b0686dad762d456cb5fc</string>
+    <string name="none"></string>
+    <string name="datasource_symbol">DS</string>
+    <string name="batch_symbol">B</string>
+    <string name="blueprint_symbol">BP</string>
+    <string name="title_activity_feed_detail">Feed Detail</string>
+    <string name="name">Name</string>
+    <string name="description">Description</string>
+    <string name="visibility">Visibility</string>
+    <string name="status">Status</string>
+    <string name="type">Type</string>
+    <string name="tags">Tags</string>
+    <string name="created">Created</string>
+    <string name="updated">Updated</string>
+    <string name="location">Location</string>
+
+</resources>
